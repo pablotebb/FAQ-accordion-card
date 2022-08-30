@@ -9,4 +9,15 @@
 body {
   font-size: variables.$Font-size-body;
   font-family: variables.$Font-family-body;
+  background: -prefix-linear-gradient(
+    180deg,
+    variables.$Soft-violet,
+    variables.$Soft-blue
+  );
+  background: linear-gradient(
+    180deg,
+    variables.$Soft-violet,
+    variables.$Soft-blue
+  );
+  height: 100vh;
 }
