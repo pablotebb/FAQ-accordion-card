@@ -1,3 +1,80 @@
 @use "variables";
 @use "initial";
 @use "footer";
+
+.main-container {
+  // border: 1px solid red;
+  width: variables.$Width-mobile;
+  min-height: variables.$Height-mobile;
+  margin: 150px auto 60px;
+  padding: 25px;
+  background-color: white;
+  border-radius: 20px;
+}
+
+.section-picture {
+  &__img {
+    // border: 1px solid blue;
+    background-image: url("../images/illustration-woman-online-mobile.svg");
+    background-repeat: no-repeat;
+    width: 240px;
+    height: 177px;
+    margin: -125px auto 0;
+  }
+  &__shadow {
+    background-image: url("../images/bg-pattern-mobile.svg");
+    background-repeat: no-repeat;
+    width: 240px;
+    height: 177px;
+    margin: -65px auto 0;
+  }
+}
+
+.section-faq {
+  position: relative;
+  // border: 1px solid red;
+  &__title {
+    font-size: 2.3em;
+    text-align: center;
+    margin: -50px 0 25px;
+  }
+  &__details {
+    summary {
+      color: variables.$Dark-grayish-blue;
+      list-style: none;
+      margin-bottom: 11px;
+      img {
+        position: absolute;
+        right: 0;
+        transition: 300ms;
+      }
+      &:hover {
+        cursor: pointer;
+        color: variables.$Soft-red;
+      }
+    }
+    p {
+      font-size: 1.1em;
+      margin-top: -40px;
+      padding-left: 0;
+      margin-bottom: 25px;
+      color: variables.$Dark-grayish-blue;
+    }
+  }
+  &__details[open] {
+    summary {
+      color: variables.$Very-dark-desaturated-blue;
+      font-weight: 700;
+      margin-bottom: 53px;
+      img {
+        transform: rotate(180deg);
+        transition: 300ms;
+      }
+    }
+  }
+  &__line {
+    border-color: transparent;
+    border-bottom-color: variables.$Light-grayish-blue;
+    margin-bottom: 11px;
+  }
+}
